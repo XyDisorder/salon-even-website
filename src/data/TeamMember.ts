@@ -23,7 +23,7 @@ export const teamMembers: TeamMember[] = [
   {
     id: 'eliot',
     name: 'Eliot',
-    role: 'Coloriste',
+    role: 'Coloriste et Coiffeur',
     image: eliot,
     bio: 'Eliot est passionné par les couleurs naturelles et lumineuses, apportant une touche artistique à chaque prestation.',
     instagram: '',

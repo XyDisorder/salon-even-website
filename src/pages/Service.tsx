@@ -1,6 +1,7 @@
 // src/pages/Services.tsx
 import { useState } from "react";
 import { services } from "../data/ServiceData";
+import { PLANITY_URL } from "../constants/url";
 
 const categories = ["Toutes les catégories", ...services.map((s) => s.category)];
 
@@ -62,12 +63,12 @@ export default function Services() {
       {/* Sticky CTA */}
       <div className="fixed bottom-6 left-1/2 -translate-x-1/2 z-50">
         <a
-          href="https://www.planity.com/even-75001-paris"
+          href={PLANITY_URL}
           target="_blank"
           rel="noopener noreferrer"
           className="inline-block bg-emerald-700 hover:bg-emerald-600 text-white font-semibold px-6 py-3 rounded-full shadow-xl transition"
         >
-          Voir tous les services sur Planity
+          Prendre rendez-vous
         </a>
       </div>
     </section>
