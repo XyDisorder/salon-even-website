@@ -13,7 +13,7 @@ export default function Services() {
       : services.filter((s) => s.category === selectedCategory);
 
   return (
-    <section className="bg-[#1e1e1e] text-white px-6 py-24 min-h-screen">
+    <section className="bg-[#1e1e1e] text-white px-6 pt-24 pb-40 min-h-screen relative">
       <div className="max-w-5xl mx-auto">
         <h1 className="text-4xl font-serif text-center mb-10">Nos services</h1>
 
@@ -63,18 +63,18 @@ export default function Services() {
             </div>
           ))}
         </div>
+      </div>
 
-        {/* CTA */}
-        <div className="text-center mt-16">
-          <a
-            href="https://www.planity.com/even-75001-paris"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-block bg-emerald-700 hover:bg-emerald-600 text-white font-semibold px-6 py-3 rounded-full transition"
-          >
-            Voir tous les services sur Planity
-          </a>
-        </div>
+      {/* Sticky CTA */}
+      <div className="fixed bottom-6 left-1/2 -translate-x-1/2 z-50">
+        <a
+          href="https://www.planity.com/even-75001-paris"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-block bg-emerald-700 hover:bg-emerald-600 text-white font-semibold px-6 py-3 rounded-full shadow-xl transition"
+        >
+          Voir tous les services sur Planity
+        </a>
       </div>
     </section>
   );
