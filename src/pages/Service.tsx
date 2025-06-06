@@ -2,6 +2,8 @@
 import { useState } from "react";
 import { services } from "../data/ServiceData";
 import { PLANITY_URL } from "../constants/url";
+import { Dropdown } from "../components/commons/Dropdown";
+import { StickyCTA } from "../components/commons/StickyCTA";
 
 const categories = ["Toutes les catégories", ...services.map((s) => s.category)];
 
@@ -18,20 +20,12 @@ export default function Services() {
       <div className="max-w-5xl mx-auto">
         <h1 className="text-4xl font-serif text-center mb-10">Nos services</h1>
 
-        {/* Dropdown filter */}
-        <div className="mb-8">
-          <select
-            value={selectedCategory}
-            onChange={(e) => setSelectedCategory(e.target.value)}
-            className="w-full md:w-auto px-4 py-2 bg-[#2a2a2a] border border-white/20 text-white rounded-md shadow-sm"
-          >
-            {categories.map((cat) => (
-              <option key={cat} value={cat} className="bg-[#1e1e1e] text-white">
-                {cat}
-              </option>
-            ))}
-          </select>
-        </div>
+      {/* Category Dropdown */}
+      <Dropdown 
+        options={categories}
+        selectedOption={selectedCategory}
+        onSelect={setSelectedCategory}
+      />
 
         {/* Full Service List with filtering */}
         <div className="space-y-12">
@@ -49,7 +43,7 @@ export default function Services() {
                     <div>
                       <p className="text-white text-base font-medium">{item.name}</p>
                     </div>
-                    <div className="mt-2 md:mt-0 text-right text-emerald-400 font-semibold">
+                    <div className="mt-2 md:mt-0 text-right text-white font-semibold">
                       {item.price}
                     </div>
                   </div>
@@ -61,16 +55,10 @@ export default function Services() {
       </div>
 
       {/* Sticky CTA */}
-      <div className="fixed bottom-6 left-1/2 -translate-x-1/2 z-50">
-        <a
-          href={PLANITY_URL}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="inline-block bg-emerald-700 hover:bg-emerald-600 text-white font-semibold px-6 py-3 rounded-full shadow-xl transition"
-        >
-          Prendre rendez-vous
-        </a>
-      </div>
+      <StickyCTA 
+        href={PLANITY_URL}
+        text="Prendre rendez-vous"
+      />
     </section>
   );
 }
