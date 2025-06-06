@@ -1,54 +1,73 @@
-# React + TypeScript + Vite
+# 💇‍♀️ Salon Even – Showcase Website
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Welcome to the repository of **Salon Even**, a hair salon located in Paris.
 
-Currently, two official plugins are available:
+This website introduces the team, services, and hours, and provides a redirect to Planity for booking appointments.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## Expanding the ESLint configuration
+## 🛠️ Tech Stack
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- **Frontend**: React + Vite + TypeScript
+- **Styling**: Tailwind CSS
+- **Routing**: React Router DOM
+- **Deployment**: Netlify
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+---
+
+## 🚀 Run the project locally
+
+```bash
+pnpm install # or npm install / yarn install
+pnpm dev     # or npm run dev / yarn dev
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+Then go to `http://localhost:5173`
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+---
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
+## 📁 Folder structure
+
 ```
+src/
+├── assets/                # Images and logos
+├── components/
+│   ├── layout/           # Header, Footer
+│   └── commons/          # StickyCTA, Dropdown, etc.
+├── constants/            # External links (Planity, LinkedIn...)
+├── data/                 # Services data (ServiceData.ts)
+├── layout/               # Main layout with Outlet
+├── pages/                # Home, Services, Team, Legal pages
+└── App.tsx               # Routes setup
+```
+
+---
+
+## 🔗 Useful links
+
+- [Salon Planity page](https://www.planity.com/even-75001-paris)
+- [Instagram](https://www.instagram.com/salon.even)
+- [Live website on Netlify](https://salon-even-website.netlify.app)
+
+---
+
+## 👩‍💻 Developer
+
+This website was designed and developed by [Sarah Bourgeois](https://github.com/XyDisorder).
+
+---
+
+## 📜 Legal and privacy
+
+- [Legal notice](/mentions-legales)
+- [Privacy policy](/politique-confidentialite)
+
+---
+
+## ✨ License
+
+
+This project is open-sourced under the MIT License.  
+See the [LICENSE](./LICENSE) file for details.  
+All visual content (images, brand, and text) remains the property of Salon Even.
+
