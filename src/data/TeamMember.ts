@@ -14,7 +14,7 @@ export const teamMembers: TeamMember[] = [
   },
   {
     id: 'fanny',
-    name: 'Fanny RENAULT',
+    name: 'Fanny',
     role: 'Coloriste et Coiffeuse',
     image: fanny,
     bio: 'Fanny est une artiste de la couleur, spécialisée dans les techniques de balayage et d’ombré hair.',
@@ -22,7 +22,7 @@ export const teamMembers: TeamMember[] = [
   },
   {
     id: 'eliot',
-    name: 'Eliot THORPEY',
+    name: 'Eliot',
     role: 'Coloriste',
     image: eliot,
     bio: 'Eliot est passionné par les couleurs naturelles et lumineuses, apportant une touche artistique à chaque prestation.',
