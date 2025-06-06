@@ -1,5 +1,5 @@
 import fanny from '../assets/team/team-fanny.jpeg';
-import fabien from '../assets/team/team-eliot.png';
+import fabien from '../assets/team/team-fabien.png';
 import eliot from '../assets/team/team-eliot.png';
 import type { TeamMember } from '../types/TeamMember';
 
