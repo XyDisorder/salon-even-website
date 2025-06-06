@@ -1,3 +1,5 @@
+import { DEVELOPER_LINKEDIN } from "../../constants/url";
+
 // src/components/layout/Footer.tsx
 export default function Footer() {
   return (
@@ -41,12 +43,12 @@ export default function Footer() {
     <div className="text-right text-neutral-500">
       Site conçu avec ❤️ par{" "}
       <a
-        href="https://github.com/XyDisorder"
+        href={DEVELOPER_LINKEDIN}
         target="_blank"
         rel="noopener noreferrer"
         className="underline hover:text-white transition"
       >
-        @XyDisorder
+        Sarah Bourgeois
       </a>
     </div>
   </div>
