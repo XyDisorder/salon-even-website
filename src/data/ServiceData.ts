@@ -6,7 +6,7 @@ export const services = [
       { name: "Femme – Coupe avec Fabien", price: "90 €", duration: "1h" },
       { name: "Brushing Cheveux Courts", price: "35 €", duration: "30min" },
       { name: "Brushing Cheveux Longs", price: "45 €", duration: "45min" },
-      { note: "Remise de 10 € pour les étudiantes de -25 ans" }
+      { note: "Remise de 10 € pour les étudiantes de -25 ans", duration: ""}
     ]
   },
   {
@@ -14,17 +14,17 @@ export const services = [
     items: [
       { name: "Homme – Coupe (Bain + Coiffage)", price: "45 €", duration: "1h" },
       { name: "Homme – Coupe avec Fabien", price: "60 €", duration: "1h" },
-      { note: "Remise de 10 € pour les étudiants de -25 ans" }
+      { note: "Remise de 10 € pour les étudiants de -25 ans", duration: "" }
     ]
   },
   {
     category: "Colorations",
     items: [
       { name: "Entretien racines", price: "48 €", duration: "1h30–2h" },
-      { name: "Supplément longueur", price: "à partir de 15 €" },
-      { name: "Patine", price: "à partir de 25 €" },
-      { name: "Placement", price: "à partir de 50 €" },
-      { name: "Décoloration ou correction", price: "Sur devis" }
+      { name: "Supplément longueur", price: "à partir de 15 €", duration: "" },
+      { name: "Patine", price: "à partir de 25 €", duration: "" },
+      { name: "Placement", price: "à partir de 50 €", duration: "" },
+      { name: "Décoloration ou correction", price: "Sur devis", duration: "" }
     ]
   },
   {
@@ -43,13 +43,13 @@ export const services = [
   {
     category: "Lissage au tanin",
     items: [
-      { name: "Lissage au tanin", price: "à partir de 290 €", note: "Uniquement sur devis au salon" }
+      { name: "Lissage au tanin", price: "à partir de 290 €", note: "Uniquement sur devis au salon", duration: "" }
     ]
   },
   {
     category: "Soins",
     items: [
-      { name: "Conditioner (à prévoir avec technique)", price: "9 €" },
+      { name: "Conditioner (à prévoir avec technique)", price: "9 €", duration: "" },
       { name: "Masque réparateur sur mesure", price: "15 €", duration: "10min" },
       { name: "Ampoule thermique Enzymo Thérapie", price: "à partir de 25 €", duration: "15min" },
       { name: "Soin Tokio Inkarami – cheveux mi-longs", price: "130 €", duration: "1h30" },

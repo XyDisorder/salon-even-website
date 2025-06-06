@@ -25,7 +25,7 @@ export const teamMembers: TeamMember[] = [
     name: 'Eliot',
     role: 'Coloriste et Coiffeur',
     image: eliot,
-    bio: 'Eliot est passionné par les couleurs naturelles et lumineuses, apportant une touche artistique à chaque prestation.',
+    bio: 'Eliot est spécialisé en blond, coupe cheveux longs et brush.',
     instagram: '',
   },
 ];

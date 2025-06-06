@@ -20,7 +20,6 @@ export default function Services() {
       <div className="max-w-5xl mx-auto">
         <h1 className="text-4xl font-serif text-center mb-10">Nos services</h1>
 
-      {/* Category Dropdown */}
       <Dropdown 
         options={categories}
         selectedOption={selectedCategory}
@@ -35,19 +34,22 @@ export default function Services() {
                 {category}
               </h2>
               <div className="space-y-6">
-                {items.map((item, index) => (
-                  <div
-                    key={index}
-                    className="border-b border-white/10 pb-4 flex flex-col md:flex-row md:items-center md:justify-between"
-                  >
-                    <div>
-                      <p className="text-white text-base font-medium">{item.name}</p>
+                  {items.map((item, index) => (
+                    <div
+                      key={index}
+                      className="border-b border-white/10 pb-4 flex flex-col md:flex-row md:items-center md:justify-between"
+                    >
+                      <div>
+                        <p className="text-white text-base font-medium">{item.name}</p>
+                        {item.duration && (
+                          <p className="text-sm text-neutral-400">Durée : {item.duration}</p>
+                        )}
+                      </div>
+                      <div className="mt-2 md:mt-0 text-right text-white font-semibold">
+                        {item.price}
+                      </div>
                     </div>
-                    <div className="mt-2 md:mt-0 text-right text-white font-semibold">
-                      {item.price}
-                    </div>
-                  </div>
-                ))}
+                  ))}
               </div>
             </div>
           ))}
