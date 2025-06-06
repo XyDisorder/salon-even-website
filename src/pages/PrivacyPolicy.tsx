@@ -35,8 +35,8 @@ export default function PrivacyPolicy() {
           <h2 className="text-xl font-semibold mb-2">4. Contact</h2>
           <p>
             Pour toute question relative à la protection de vos données, vous pouvez nous écrire à l’adresse suivante :
-            <a href="mailto:contact@saloneven.fr" className="underline ml-1 hover:text-emerald-400">
-              contact@saloneven.fr
+            <a href="mailto:salon.even.paris@gmail.com" className="underline ml-1 hover:text-emerald-400">
+               salon.even.paris@gmail.com
             </a>
           </p>
         </div>

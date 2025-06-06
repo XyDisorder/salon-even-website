@@ -3,7 +3,7 @@ import fabien from '../assets/team/team-fabien.png';
 import eliot from '../assets/team/team-eliot.png';
 import type { TeamMember } from '../types/TeamMember';
 
-export const teamMembers: TeamMember[] = [
+export const teamMembersData: TeamMember[] = [
   {
     id: 'fabien',
     name: 'Fabien EVEN',

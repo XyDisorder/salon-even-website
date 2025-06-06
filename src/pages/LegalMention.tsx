@@ -10,7 +10,7 @@ export default function LegalMention() {
           <p>
             Salon Even – Fabien EVEN<br />
             18 avenue Victoria, 75001 Paris<br />
-            SIRET : 123 456 789 00012<br />
+            SIRET : 93 217 423 800 018<br />
             Responsable de la publication : Fabien EVEN
           </p>
         </div>
@@ -35,8 +35,8 @@ export default function LegalMention() {
           <h2 className="text-xl font-semibold mb-2">Contact</h2>
           <p>
             Pour toute question, vous pouvez nous contacter à l’adresse suivante :
-            <a href="mailto:contact@saloneven.fr" className="underline ml-1 hover:text-emerald-400">
-              contact@saloneven.fr
+            <a href="mailto:salon.even.paris@gmail.com" className="underline ml-1 hover:text-emerald-400">
+               salon.even.paris@gmail.com
             </a>
           </p>
         </div>

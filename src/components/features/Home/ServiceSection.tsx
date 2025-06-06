@@ -1,7 +1,7 @@
 // src/components/ServiceCTA.tsx
 import { Link } from 'react-router-dom';
 
-export default function ServiceCTA() {
+export default function ServiceSection() {
   return (
     <section className="bg-beige text-black py-24 text-center border-t border-neutral-300">
       <h2 className="text-3xl font-serif mb-6">Découvrez nos prestations</h2>

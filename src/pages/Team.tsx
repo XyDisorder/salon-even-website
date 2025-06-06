@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from 'react';
 import { useLocation } from 'react-router-dom';
-import { teamMembers } from '../data/TeamMember';
+import { teamMembersData } from '../data/TeamMemberData';
 
 export default function Team() {
   const { hash } = useLocation();
@@ -25,7 +25,7 @@ export default function Team() {
         <h1 className="text-4xl font-serif text-center mb-20">Notre équipe</h1>
 
         <div className="space-y-24">
-          {teamMembers.map((member) => (
+          {teamMembersData.map((member) => (
             <div
               key={member.id}
               id={member.id}

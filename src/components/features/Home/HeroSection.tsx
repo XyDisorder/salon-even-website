@@ -1,12 +1,12 @@
 // src/components/Hero.tsx
-import imageHome from '../../../assets/imageHomeCoiffure.png';
+import imageHome from '../../../assets/home-illustration/imageHomeCoiffure.png';
 import { PLANITY_URL } from '../../../constants/url';
 
-export default function Hero() {
+export default function HeroSection() {
   return (
     <section className="bg-beige text-black py-20 px-6">
       <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-12">
-        {/* Texte à gauche */}
+        {/* Main text */}
         <div className="md:w-1/2 text-left">
           <h1 className="text-5xl font-serif mb-6 leading-tight">
             Salon Even<br />
@@ -27,7 +27,7 @@ export default function Hero() {
             Prendre rendez-vous
           </a>
 
-          {/* téléphone */}
+          {/* phone number */}
           <div className="mt-6 text-lg">
             <a href="tel:+33140267842" className="text-black/80 hover:text-black transition">
               📞 01 40 26 78 42
@@ -36,7 +36,7 @@ export default function Hero() {
 
         </div>
 
-        {/* Image à droite */}
+        {/* right picture */}
         <div className="md:w-1/2">
           <img
             src={imageHome}

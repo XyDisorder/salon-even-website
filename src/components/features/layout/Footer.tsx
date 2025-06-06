@@ -1,5 +1,5 @@
 // src/components/layout/Footer.tsx
-import { DEVELOPER_LINKEDIN } from "../../constants/url";
+import { DEVELOPER_LINKEDIN } from "../../../constants/url";
 
 export default function Footer() {
   return (

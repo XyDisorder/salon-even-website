@@ -1,8 +1,8 @@
 
 import useEmblaCarousel from 'embla-carousel-react';
-import img1 from '../../../assets/salon/salon1.png';
-import img2 from '../../../assets/salon/salon2.png';
-import img3 from '../../../assets/salon/salon3.png';
+import img1 from '../../../assets/home-carroussel/salon1.png';
+import img2 from '../../../assets/home-carroussel/salon2.png';
+import img3 from '../../../assets/home-carroussel/salon3.png';
 import  { useCallback, useEffect, useState } from 'react';
 
 const images = [img1, img2, img3];

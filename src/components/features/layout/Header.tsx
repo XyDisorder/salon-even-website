@@ -1,32 +1,26 @@
 import { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { PLANITY_URL } from '../../constants/url';
-import even2 from '../../assets/even2.svg';
+import { PLANITY_URL } from '../../../constants/url';
+import { navItemsData } from '../../../data/NavItemData';
+import { EvenLogo } from '../../commons/EvenLogo';
 
 export default function Header() {
   const location = useLocation();
   const [mobileOpen, setMobileOpen] = useState(false);
 
-  const navItems = [
-    { label: 'Accueil', path: '/' },
-    { label: 'Services', path: '/services' },
-    { label: 'Équipe', path: '/team' },
-  ];
 
   return (
     <header className="bg-black text-white px-6 py-4 shadow-sm">
       <div className="max-w-7xl mx-auto flex items-center justify-between">
         {/* Logo */}
-        <img
-          src={even2}
-          alt="Even Logo"
-          className="h-10 w-auto"
-          style={{ filter: 'invert(1)' }}
-        />
+
+        <Link to="/" className="flex items-center">
+            <EvenLogo className="h-10 w-auto" />   
+        </Link>    
 
         {/* Desktop Nav */}
         <nav className="hidden md:flex gap-8 items-center text-sm">
-          {navItems.map((item) => (
+          {navItemsData.map((item) => (
             <Link
               key={item.path}
               to={item.path}
@@ -74,7 +68,7 @@ export default function Header() {
       {/* Mobile Nav */}
       {mobileOpen && (
         <div className="md:hidden mt-4 px-4 space-y-4">
-          {navItems.map((item) => (
+          {navItemsData.map((item) => (
             <Link
               key={item.path}
               to={item.path}

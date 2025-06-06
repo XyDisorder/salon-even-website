@@ -5,3 +5,4 @@ export const INSTAGRAM_URL_FABIEN = 'https://www.instagram.com/fabieneven/';
 export const INSTAGRAM_URL_ELIOT = 'https://www.instagram.com/eliot_thorpey/';
 
 export const DEVELOPER_LINKEDIN = 'https://www.linkedin.com/in/sarah-bourgeois-78159ba9/'; 
+

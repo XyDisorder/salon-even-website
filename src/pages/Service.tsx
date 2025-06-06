@@ -1,19 +1,19 @@
 // src/pages/Services.tsx
 import { useState } from "react";
-import { services } from "../data/ServiceData";
+import { servicesData } from "../data/ServiceData";
 import { PLANITY_URL } from "../constants/url";
 import { Dropdown } from "../components/commons/Dropdown";
 import { StickyCTA } from "../components/commons/StickyCTA";
 
-const categories = ["Toutes les catégories", ...services.map((s) => s.category)];
+const categories = ["Toutes les catégories", ...servicesData.map((s) => s.category)];
 
 export default function Services() {
   const [selectedCategory, setSelectedCategory] = useState<string>("Toutes les catégories");
 
   const filteredServices =
     selectedCategory === "Toutes les catégories"
-      ? services
-      : services.filter((s) => s.category === selectedCategory);
+      ? servicesData
+      : servicesData.filter((s) => s.category === selectedCategory);
 
   return (
     <section className="bg-[#1e1e1e] text-white px-6 pt-24 pb-40 min-h-screen relative">
@@ -41,7 +41,7 @@ export default function Services() {
                     >
                       <div>
                         <p className="text-white text-base font-medium">{item.name}</p>
-                        {item.duration && (
+                        {item?.duration && (
                           <p className="text-sm text-neutral-400">Durée : {item.duration}</p>
                         )}
                         { item.note && (
