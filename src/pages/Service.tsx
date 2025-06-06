@@ -44,6 +44,9 @@ export default function Services() {
                         {item.duration && (
                           <p className="text-sm text-neutral-400">Durée : {item.duration}</p>
                         )}
+                        { item.note && (
+                          <p className="text-sm text-neutral-400">Note : {item.note}</p>
+                        )}
                       </div>
                       <div className="mt-2 md:mt-0 text-right text-white font-semibold">
                         {item.price}
