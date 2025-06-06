@@ -6,7 +6,7 @@ export default function Footer() {
     <footer className="bg-[#111111] text-neutral-400 text-sm border-t border-white/10 px-6 py-8 mt-24">
       <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-y-6 text-sm">
 
-        {/* Bloc gauche : Adresse + Instagram */}
+        {/* Bloc left : Adress + Instagram */}
         <div className="flex flex-col gap-2">
           <div className="text-white font-semibold">
             Salon Even
