@@ -47,12 +47,6 @@ export default function Services() {
                   >
                     <div>
                       <p className="text-white text-base font-medium">{item.name}</p>
-                      {item.duration && (
-                        <p className="text-sm text-neutral-400">Durée : {item.duration}</p>
-                      )}
-                      {item.note && (
-                        <p className="text-sm text-neutral-400 italic mt-1">{item.note}</p>
-                      )}
                     </div>
                     <div className="mt-2 md:mt-0 text-right text-emerald-400 font-semibold">
                       {item.price}
