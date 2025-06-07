@@ -11,10 +11,12 @@
   },
   "dependencies": {
     "embla-carousel-react": "^8.6.0",
+    "lucide-react": "^0.513.0",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
     "react-router-dom": "^7.6.2",
     "swiper": "^9.4.1",
+    "yet-another-react-lightbox": "^1.1.1",
     "zustand": "^5.0.5"
   },
   "devDependencies": {

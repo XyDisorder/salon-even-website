@@ -1,16 +1,22 @@
-
+import { useCallback, useEffect, useState } from 'react';
 import useEmblaCarousel from 'embla-carousel-react';
-import img1 from '../../../assets/home-carroussel/salon1.png';
-import img2 from '../../../assets/home-carroussel/salon2.png';
-import img3 from '../../../assets/home-carroussel/salon3.png';
-import  { useCallback, useEffect, useState } from 'react';
+import { Lightbox } from 'yet-another-react-lightbox';
+import 'yet-another-react-lightbox/styles.css';
+import { Search } from 'lucide-react';
 
-const images = [img1, img2, img3];
+import img1 from '../../../assets/home-carroussel/salon1.png';
+import img4 from '../../../assets/home-carroussel/salon4.png';
+import img5 from '../../../assets/home-carroussel/salon5.png';
+import im6 from '../../../assets/home-carroussel/salon6.png';
+
+const images = [img1, img4, img5, im6];
 
 export default function SalonGallery() {
   const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true });
   const [canScrollPrev, setCanScrollPrev] = useState(false);
   const [canScrollNext, setCanScrollNext] = useState(false);
+  const [lightboxOpen, setLightboxOpen] = useState(false);
+  const [lightboxIndex, setLightboxIndex] = useState(0);
 
   const autoplay = useCallback(() => {
     if (!emblaApi) return;
@@ -19,7 +25,6 @@ export default function SalonGallery() {
 
   useEffect(() => {
     if (!emblaApi) return;
-
     const interval = setInterval(autoplay, 4000);
 
     const onSelect = () => {
@@ -28,7 +33,7 @@ export default function SalonGallery() {
     };
 
     emblaApi.on('select', onSelect);
-    onSelect(); // initial update
+    onSelect();
 
     return () => clearInterval(interval);
   }, [emblaApi, autoplay]);
@@ -42,18 +47,28 @@ export default function SalonGallery() {
           <div className="overflow-hidden rounded" ref={emblaRef}>
             <div className="flex gap-6">
               {images.map((img, i) => (
-                <div key={i} className="min-w-full flex-shrink-0">
+                <div key={i} className="relative min-w-full flex-shrink-0 group">
                   <img
                     src={img}
                     alt={`Salon ${i + 1}`}
                     className="w-full h-[400px] object-cover rounded"
                   />
+                  {/* Icône loupe visible au hover */}
+                  <button
+                    onClick={() => {
+                      setLightboxIndex(i);
+                      setLightboxOpen(true);
+                    }}
+  className="absolute inset-0 flex items-center justify-center bg-black/40 opacity-0 group-hover:opacity-100 transition rounded"
+>
+  <Search className="w-8 h-8 text-white" />
+</button>
                 </div>
               ))}
             </div>
           </div>
 
-          {/* Bouton gauche */}
+          {/* Boutons gauche/droite */}
           <button
             onClick={() => emblaApi?.scrollPrev()}
             disabled={!canScrollPrev}
@@ -61,8 +76,6 @@ export default function SalonGallery() {
           >
             ‹
           </button>
-
-          {/* Bouton droite */}
           <button
             onClick={() => emblaApi?.scrollNext()}
             disabled={!canScrollNext}
@@ -71,8 +84,18 @@ export default function SalonGallery() {
             ›
           </button>
         </div>
+
+        {/* Lightbox */}
+        <Lightbox
+          open={lightboxOpen}
+          close={() => setLightboxOpen(false)}
+          index={lightboxIndex}
+          slides={images.map((src) => ({ src }))}
+          on={{
+            view: (event: { index: number }) => setLightboxIndex(event.index),
+          }}
+        />
       </div>
     </section>
   );
 }
-
