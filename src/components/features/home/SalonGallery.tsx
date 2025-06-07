@@ -59,10 +59,10 @@ export default function SalonGallery() {
                       setLightboxIndex(i);
                       setLightboxOpen(true);
                     }}
-  className="absolute inset-0 flex items-center justify-center bg-black/40 opacity-0 group-hover:opacity-100 transition rounded"
->
-  <Search className="w-8 h-8 text-white" />
-</button>
+                    className="absolute inset-0 flex items-center justify-center bg-black/40 opacity-0 group-hover:opacity-100 transition rounded"
+                    >
+                    <Search className="w-8 h-8 text-white" />
+                  </button>
                 </div>
               ))}
             </div>
